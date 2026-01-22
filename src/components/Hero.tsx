@@ -162,7 +162,7 @@ export default function Hero() {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
           <div className="flex flex-col items-center gap-2 text-[--color-text-muted]">
-            <span className="text-xs tracking-wider uppercase">Scroll</span>
+            <span className="text-xs tracking-wider uppercase"></span>
             <svg
               width="20"
               height="20"

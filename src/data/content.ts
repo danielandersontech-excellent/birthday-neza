@@ -23,10 +23,10 @@ export interface GalleryImage {
 // ============================================
 export const heroContent = {
   greeting: "Happy Birthday",
-  name: "Haifa Neza Tama", 
-  tagline: "May your day be as beautiful as your smile",
-  date: "January 22, 2026",
-  mainImage: "/image/neza-8.jpg", // Foto Utama (Cover)
+  name: "Haifa Neza Tama",
+  tagline: "Hari ini dunia merayakan kehadiran seseorang yang istimewa",
+  date: "22 Januari 2026",
+  mainImage: "/image/neza-8.jpg",
   mainImageAlt: "Birthday Girl"
 };
 
@@ -36,61 +36,93 @@ export const heroContent = {
 export const openingContent = {
   subtitle: "You're Invited to Celebrate",
   title: "Neza's Special Day",
-  buttonText: "Open Invitation",
+  buttonText: "Open Invitation ✨",
   loadingText: "Preparing something special..."
 };
 
 // ============================================
-// WISHES SLIDER - MAIN FEATURE
+// WISHES SLIDER - MAIN FEATURE (10 SLIDES)
 // ============================================
 export const wishesSlides: WishSlide[] = [
   {
     id: 1,
-    title: "To The One I Love",
-    content: "Dari pertama kali kita bertemu, aku tahu hidupku akan berubah selamanya. Setiap momen bersamamu adalah hadiah yang tak ternilai. Terima kasih telah menjadi cahaya dalam hidupku.",
+    title: "Hey, Kamuuu 🌸",
+    content: "Sebelum kamu scroll lebih jauh, aku mau kamu tahu satu hal: ini bukan sekadar website. Ini adalah cara aku merangkai semua hal yang mungkin susah kuucapkan secara langsung. Jadi, pelan-pelan aja bacanya ya? Anggap ini seperti surat yang dikemas berbeda.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-2.jpg", // Foto
-    mediaAlt: "Beautiful moment"
+    mediaSrc: "/image/neza-1.jpg",
+    mediaAlt: "Opening"
   },
   {
     id: 2,
-    title: "Our Beautiful Journey",
-    content: "Setiap langkah yang kita ambil bersama, setiap tawa yang kita bagikan, setiap air mata yang kita usap bersama - semuanya membentuk cerita cinta yang indah. Ini adalah chapter terbaikku.",
+    title: "22 Januari",
+    content: "Ada yang spesial dari tanggal ini. Bukan cuma karena ini hari ulang tahunmu, tapi karena di tanggal inilah dunia kedatangan seseorang yang—tanpa dia sadari—punya kemampuan untuk membuat hari-hari orang lain terasa lebih berwarna. Termasuk hariku.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-3.jpg", // Foto
-    mediaAlt: "Couple memories"
+    mediaSrc: "/image/neza-2.jpg",
+    mediaAlt: "Grateful"
   },
   {
     id: 3,
-    title: "My Favorite Video of You",
-    content: "Melihat senyum dan tawamu di video ini selalu membuat hariku lebih cerah. Kamu adalah definisi kebahagiaan bagiku.",
-    mediaType: 'video', 
-    mediaSrc: "/image/vid-neza.mp4", // VIDEO
-    mediaAlt: "Special video memory"
+    title: "Yang Jarang Orang Tahu",
+    content: "Banyak orang mungkin cuma lihat sisi ceriamu. Tapi aku? Aku memperhatikan lebih dari itu. Aku lihat bagaimana kamu tetap tersenyum meski sedang lelah. Bagaimana kamu selalu mendahulukan orang lain. Dan itu... membuatku diam-diam mengagumimu lebih dalam dari yang kamu kira.",
+    mediaType: 'image',
+    mediaSrc: "/image/neza-3.jpg",
+    mediaAlt: "Proud"
   },
   {
     id: 4,
-    title: "Dreams Together",
-    content: "Di hari spesialmu ini, aku ingin berjanji untuk terus bermimpi bersamamu. Untuk membangun masa depan yang penuh cinta, tawa, dan kebahagiaan. Bersama, kita bisa melewati segalanya.",
-    mediaType: 'image',
-    mediaSrc: "/image/neza-4.jpg", // Foto
-    mediaAlt: "Dreaming together"
+    title: "A Little Throwback 🎬",
+    content: "Kalau ditanya apa yang paling aku suka dari mengenalmu, jawabannya mungkin ada di video ini. Momen-momen kecil yang kelihatan biasa, tapi entah kenapa selalu berhasil bikin aku tersenyum sendiri kalau mengingatnya.",
+    mediaType: 'video',
+    mediaSrc: "/image/vid-neza.mp4",
+    mediaAlt: "Video Memory"
   },
   {
     id: 5,
-    title: "Forever Grateful",
-    content: "Terima kasih telah memilihku. Terima kasih telah mencintaiku dengan segala kekuranganku. Terima kasih telah menjadi partnerku dalam petualangan hidup ini.",
+    title: "Untuk Kamu yang Sering Overthinking",
+    content: "Aku tahu otakmu sering jadi musuh terberatmu sendiri. Suka mikirin hal-hal yang belum tentu terjadi, khawatir sama sesuatu yang belum pasti. Tapi coba sesekali kasih dirimu jeda. Napas dulu. Kamu sudah melakukan yang terbaik dengan apa yang kamu punya.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-5.jpg", // Foto
-    mediaAlt: "Sweet memories"
+    mediaSrc: "/image/neza-4.jpg",
+    mediaAlt: "Reassurance"
   },
   {
     id: 6,
-    title: "Happy Birthday, My Love",
-    content: "Selamat ulang tahun, sayangku. Semoga tahun ini membawa lebih banyak kebahagiaan, kesuksesan, dan cinta untukmu. Aku akan selalu di sini, mencintaimu hari ini, besok, dan selamanya. 💕",
+    title: "Reminder Kecil",
+    content: "Kamu tidak perlu jadi versi yang \"lebih baik\" untuk diapresiasi. Kamu tidak perlu mencapai ini-itu dulu untuk merasa layak. Hari ini, di umurmu yang baru, aku harap kamu mulai belajar untuk memeluk dirimu sendiri—dengan semua chaos dan keindahannya.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-6.jpg", // Foto
-    mediaAlt: "Celebration"
+    mediaSrc: "/image/neza-5.jpg",
+    mediaAlt: "Enough"
+  },
+  {
+    id: 7,
+    title: "Soal Mimpi-Mimpimu 🎓",
+    content: "Beasiswa itu? Kamu akan mendapatkannya. Bukan karena aku sok tahu, tapi karena aku lihat sendiri bagaimana kamu berjuang. Orang yang berusaha sekeras kamu tidak mungkin pulang dengan tangan kosong. Tinggal tunggu waktunya.",
+    mediaType: 'image',
+    mediaSrc: "/image/neza-6.jpg",
+    mediaAlt: "Scholarship"
+  },
+  {
+    id: 8,
+    title: "The Future Baker 🧁",
+    content: "Suatu hari nanti, aku yakin akan ada toko kecil dengan aroma butter dan vanilla yang menguar dari dalamnya. Dan di balik counter-nya, ada kamu—dengan apron dan senyum lebar, menyapa setiap orang yang datang. Itu bukan mimpi kosong. Itu coming soon.",
+    mediaType: 'image',
+    mediaSrc: "/image/neza-7.jpg",
+    mediaAlt: "Dreams"
+  },
+  {
+    id: 9,
+    title: "Kalau Suatu Hari Kamu Butuh Seseorang",
+    content: "Aku nggak bisa janji banyak hal. Tapi satu yang pasti: aku akan selalu jadi tempat yang aman buatmu. Entah untuk cerita, untuk diam bareng, atau sekadar untuk tahu bahwa ada orang yang genuinely peduli. Tanpa syarat. Tanpa ekspektasi.",
+    mediaType: 'image',
+    mediaSrc: "/image/neza-9.jpg",
+    mediaAlt: "Support"
+  },
+  {
+    id: 10,
+    title: "Happy Birthday, Neza 🎂",
+    content: "Di umurmu yang baru ini, aku doakan kamu menemukan lebih banyak alasan untuk bahagia. Lebih banyak keberanian untuk bermimpi. Dan lebih banyak momen di mana kamu bisa bilang ke diri sendiri, \"Aku bangga jadi aku.\" Selamat ulang tahun. Terima kasih sudah hadir di dunia ini. 💕",
+    mediaType: 'image',
+    mediaSrc: "/image/neza-10.jpg",
+    mediaAlt: "Closing"
   }
 ];
 
@@ -105,11 +137,12 @@ export const galleryImages: GalleryImage[] = [
   { id: 5, src: "/image/neza-5.jpg", alt: "Memory 5", span: 'tall' },
   { id: 6, src: "/image/neza-6.jpg", alt: "Memory 6", span: 'normal' },
   { id: 7, src: "/image/neza-7.jpg", alt: "Memory 7", span: 'wide' },
-  { id: 8, src: "/image/neza-13.jpg", alt: "Memory 8", span: 'normal' },
   { id: 9, src: "/image/neza-9.jpg", alt: "Memory 9", span: 'tall' },
   { id: 10, src: "/image/neza-10.jpg", alt: "Memory 10", span: 'normal' },
-  { id: 11, src: "/image/neza-11.jpg", alt: "Memory 11", span: 'wide' },
-  { id: 14, src: "/image/neza-14.jpg", alt: "Memory 14", span: 'normal' },
+  { id: 11, src: "/image/neza-11.jpg", alt: "Memory 11", span: 'normal' },
+  { id: 12, src: "/image/neza-12.jpg", alt: "Memory 12", span: 'normal' },
+  { id: 13, src: "/image/neza-13.jpg", alt: "Memory 13", span: 'tall' },
+  { id: 14, src: "/image/neza-14.jpg", alt: "Memory 14", span: 'tall' },
   { id: 15, src: "/image/neza-15.jpg", alt: "Memory 15", span: 'wide' },
 ];
 
@@ -118,10 +151,10 @@ export const galleryImages: GalleryImage[] = [
 // ============================================
 export const wishSectionContent = {
   title: "Make a Wish",
-  subtitle: "Pejamkan matamu, dan ucapkan harapan dalam hati...",
+  subtitle: "Pejamkan mata, tarik napas, bisikkan harapanmu...",
   blowButtonText: "Tiup Lilin ✨",
-  afterWishTitle: "Happy Birthday Neza!",
-  afterWishMessage: "Semoga semua impianmu menjadi kenyataan. Aku akan selalu ada untuk mendukungmu. Dengan cinta yang tak terhingga... 💕",
+  afterWishTitle: "Happy Birthday, Neza! 🎂",
+  afterWishMessage: "Apapun yang baru saja kamu harapkan, aku ikut mengaminkannya dari sini. Semoga tahun ini menjadi babak terbaik dalam hidupmu. 💕",
   candleCount: 5
 };
 
@@ -129,8 +162,8 @@ export const wishSectionContent = {
 // FOOTER / CLOSING
 // ============================================
 export const closingContent = {
-  signature: "With all my love,",
-  senderName: "Daniel", 
+  signature: "From someone who cares,",
+  senderName: "Daniel",
   year: "2026"
 };
 
