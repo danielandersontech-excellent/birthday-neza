@@ -134,7 +134,7 @@ export const wishSectionContent = {
   title: "Make a Wish",
   subtitle: "Pejamkan mata, tarik napas, bisikkan harapanmu...",
   blowButtonText: "Tiup Lilin ✨",
-  afterWishTitle: "Happy Birthday, Neza! 🎂",
+  afterWishTitle: "Happy Birthday, Kamuu! 🎂",
   afterWishMessage: "Apapun yang baru saja kamu bisikkan pada semesta, aku ikut mengaminkannya dari sini paling kencang. Semoga Tuhan memeluk mimpi-mimpimu, memudahkan langkahmu, dan menjaga senyummu. Ingat, kamu tidak pernah berjalan sendirian. Aku selalu ada di barisan pendukungmu. 💕",
   candleCount: 5
 };
