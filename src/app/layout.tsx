@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Happy Birthday My Love 💕',
+  title: 'Happy Birthday Kamu 💕',
   description: 'A special birthday celebration website made with love',
   keywords: ['birthday', 'love', 'celebration', 'romantic'],
   authors: [{ name: 'Your Forever Person' }],
   openGraph: {
-    title: 'Happy Birthday My Love 💕',
+    title: 'Happy Birthday Kamu 💕',
     description: 'A special birthday celebration website made with love',
     type: 'website',
   },

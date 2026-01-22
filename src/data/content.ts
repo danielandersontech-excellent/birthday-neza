@@ -90,7 +90,7 @@ export const wishesSlides: WishSlide[] = [
   {
     id: 8,
     title: "The Future Baker 🧁",
-    content: "Suatu hari nanti, aku yakin akan ada toko kecil dengan aroma butter dan vanilla yang menguar dari dalamnya. Dan di balik counter-nya, ada kamu, dengan apron dan senyum lebar, menyapa setiap orang yang datang. Itu bukan mimpi kosong. Itu coming soon.",
+    content: "Suatu hari nanti, aku yakin akan ada toko kecil dengan aroma butter dan vanilla yang keluar dari dalamnya. Dan di balik counter-nya, ada kamu, dengan apron dan senyum lebar, menyapa setiap orang yang datang. Itu bukan mimpi kosong. Itu coming soon.",
     mediaType: 'image',
     mediaSrc: "/image/neza-10.jpg",
     mediaAlt: "Dreams"
