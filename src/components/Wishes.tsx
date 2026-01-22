@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { wishesSlides } from '@/data/content';
 import Image from 'next/image';
@@ -147,7 +147,7 @@ export default function Wishes() {
                   />
                 )}
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                 
                 {/* Slide Number */}
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -203,11 +203,12 @@ export default function Wishes() {
           </AnimatePresence>
         </div>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows - FIXED COLORS */}
         <div className="flex justify-between items-center mt-6 px-2">
+          {/* Previous Button */}
           <button
             onClick={() => paginate(-1)}
-            className="flex items-center gap-2 px-4 py-2.5 bg-white/80 backdrop-blur-sm rounded-full border border-[--color-blush] text-[--color-text-secondary] hover:bg-white hover:text-[--color-rose-dark] transition-all duration-300 group"
+            className="flex items-center gap-2 px-5 py-3 bg-white rounded-full border-2 border-[--color-rose] text-[--color-rose-dark] hover:bg-[--color-soft-pink] hover:border-[--color-rose-dark] transition-all duration-300 group shadow-md"
             aria-label="Previous slide"
           >
             <svg
@@ -216,29 +217,30 @@ export default function Wishes() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="group-hover:-translate-x-1 transition-transform"
             >
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            <span className="text-sm font-medium">Prev</span>
+            <span className="text-sm font-semibold">Prev</span>
           </button>
 
+          {/* Next Button - HIGHER CONTRAST */}
           <button
             onClick={() => paginate(1)}
-            className="flex items-center gap-2 px-4 py-2.5 bg-[--color-rose-dark] rounded-full text-white hover:bg-[--color-rose] transition-all duration-300 group shadow-lg shadow-rose-200"
+            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#e11d48] to-[#f43f5e] rounded-full text-white hover:from-[#be123c] hover:to-[#e11d48] transition-all duration-300 group shadow-lg"
             aria-label="Next slide"
           >
-            <span className="text-sm font-medium">Next</span>
+            <span className="text-sm font-semibold">Next</span>
             <svg
               width="18"
               height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="group-hover:translate-x-1 transition-transform"
