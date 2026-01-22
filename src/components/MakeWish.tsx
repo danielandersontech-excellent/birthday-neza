@@ -2,10 +2,9 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BIRTHDAY_DATA } from '@/data/content'; // Saya sesuaikan import data agar tidak error
+import { wishSectionContent, closingContent } from '@/data/content';
 
-// --- PERBAIKAN: Menggunakan 'any' untuk menghindari error build TypeScript ---
-// Library canvas-confetti kadang bermasalah dengan tipe data strict saat dynamic import
+// Dynamically import confetti to avoid SSR issues
 let confettiLib: any = null;
 
 export default function MakeWish() {
@@ -16,8 +15,7 @@ export default function MakeWish() {
   // Load confetti library on client side
   useEffect(() => {
     import('canvas-confetti').then((module) => {
-      // PERBAIKAN: Handle jika module.default ada atau langsung module
-      confettiLib = module.default || module;
+      confettiLib = module.default;
     });
   }, []);
 
@@ -63,7 +61,7 @@ export default function MakeWish() {
       particleCount: 100,
       spread: 100,
       origin: { y: 0.6 },
-      shapes: ['circle'], // Ubah ke circle jika shape heart error di beberapa browser
+      shapes: ['circle'],
       colors: ['#fda4af', '#fb7185', '#f43f5e'],
       scalar: 1.2,
     });
@@ -101,7 +99,7 @@ export default function MakeWish() {
             className="relative mb-0.5"
           >
             {/* Outer glow */}
-            <div className="absolute -inset-3 bg-yellow-400/30 rounded-full blur-md flame-glow" />
+            <div className="absolute -inset-3 bg-[--color-gold]/30 rounded-full blur-md flame-glow" />
             {/* Inner flame */}
             <div className="candle-flame relative">
               <svg width="16" height="24" viewBox="0 0 16 24">
@@ -127,7 +125,7 @@ export default function MakeWish() {
       </AnimatePresence>
 
       {/* Candle body */}
-      <div className="w-3 h-12 bg-gradient-to-b from-rose-200 to-rose-300 rounded-t-sm relative overflow-hidden">
+      <div className="w-3 h-12 bg-gradient-to-b from-[--color-soft-pink] to-[--color-blush] rounded-t-sm relative overflow-hidden">
         {/* Drip effect */}
         <div className="absolute -top-1 left-0.5 w-2 h-3 bg-white/50 rounded-full" />
         <div className="absolute top-4 right-0 w-1.5 h-2 bg-white/30 rounded-full" />
@@ -136,7 +134,7 @@ export default function MakeWish() {
   );
 
   return (
-    <section className="py-16 px-6 relative min-h-[600px] flex flex-col items-center justify-center">
+    <section className="py-16 px-6 relative">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -145,14 +143,14 @@ export default function MakeWish() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <span className="text-sm uppercase tracking-[0.3em] text-rose-500 font-medium">
+        <span className="text-sm uppercase tracking-[0.3em] text-[--color-rose-dark] font-medium">
           ✦ Special Moment ✦
         </span>
-        <h2 className="font-serif text-3xl md:text-4xl font-semibold gradient-text mt-3">
-          Make a Wish
+        <h2 className="font-display text-3xl md:text-4xl font-semibold gradient-text mt-3">
+          {wishSectionContent.title}
         </h2>
-        <p className="text-gray-500 mt-3 text-sm">
-          Pejamkan mata dan ucapkan harapanmu
+        <p className="text-[--color-text-secondary] mt-3 text-sm">
+          {wishSectionContent.subtitle}
         </p>
       </motion.div>
 
@@ -167,12 +165,11 @@ export default function MakeWish() {
         {/* Cake Illustration */}
         <div className="relative mb-8">
           {/* Plate/Base glow */}
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-8 bg-rose-200/20 rounded-full blur-xl" />
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-8 bg-[--color-rose]/20 rounded-full blur-xl" />
 
           {/* Candles */}
           <div className="flex justify-center gap-4 mb-2 relative z-10">
-            {/* Kita buat 3 lilin default */}
-            {[...Array(3)].map((_, i) => (
+            {[...Array(wishSectionContent.candleCount)].map((_, i) => (
               <Candle key={i} index={i} delay={i} />
             ))}
           </div>
@@ -256,10 +253,8 @@ export default function MakeWish() {
               whileTap={{ scale: 0.95 }}
               onClick={handleBlowCandles}
               disabled={!candlesLit || isBlowing}
-              className={`px-8 py-3 rounded-full font-bold shadow-lg transition-all ${
-                !candlesLit || isBlowing 
-                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                  : 'bg-gradient-to-r from-rose-400 to-rose-500 text-white hover:shadow-rose-300/50'
+              className={`glow-button text-lg mt-4 ${
+                !candlesLit || isBlowing ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -275,7 +270,7 @@ export default function MakeWish() {
                   </>
                 ) : (
                   <>
-                    Tiup Lilin 🕯️
+                    {wishSectionContent.blowButtonText}
                   </>
                 )}
               </span>
@@ -297,21 +292,24 @@ export default function MakeWish() {
                 🎉
               </motion.div>
 
-              <h3 className="font-serif text-3xl font-semibold gradient-text mb-4 text-rose-500">
-                Yeay! Selamat Ulang Tahun!
+              <h3 className="font-display text-3xl font-semibold gradient-text mb-4">
+                {wishSectionContent.afterWishTitle}
               </h3>
 
-              <p className="text-gray-600 leading-relaxed mb-6 font-sans">
-                Semoga semua harapanmu yang barusan diucapkan terkabul yaaa. Aamiin!
+              <p className="text-[--color-text-secondary] leading-relaxed mb-6">
+                {wishSectionContent.afterWishMessage}
               </p>
 
               {/* Signature */}
-              <div className="mt-8 pt-6 border-t border-rose-200">
-                <p className="font-serif italic text-gray-400 text-sm">
-                  With love,
+              <div className="mt-8 pt-6 border-t border-[--color-blush]">
+                <p className="font-accent italic text-[--color-text-muted] text-sm">
+                  {closingContent.signature}
                 </p>
-                <p className="font-serif text-xl text-rose-500 mt-2">
-                  {BIRTHDAY_DATA.closingMessage}
+                <p className="font-display text-xl text-[--color-rose-dark] mt-2">
+                  {closingContent.senderName}
+                </p>
+                <p className="text-xs text-[--color-text-muted] mt-2">
+                  © {closingContent.year} • Made with 💕
                 </p>
               </div>
             </motion.div>
