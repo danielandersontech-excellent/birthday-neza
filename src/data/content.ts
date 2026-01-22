@@ -1,7 +1,3 @@
-// ============================================
-// BIRTHDAY WEBSITE CONTENT - EDIT THIS FILE
-// ============================================
-
 export interface WishSlide {
   id: number;
   title: string;
@@ -18,9 +14,6 @@ export interface GalleryImage {
   span?: 'tall' | 'wide' | 'normal';
 }
 
-// ============================================
-// HERO SECTION
-// ============================================
 export const heroContent = {
   greeting: "Happy Birthday",
   name: "Haifa Neza Tama",
@@ -30,9 +23,6 @@ export const heroContent = {
   mainImageAlt: "Birthday Girl"
 };
 
-// ============================================
-// OPENING INVITATION
-// ============================================
 export const openingContent = {
   subtitle: "You're Invited to Celebrate",
   title: "Neza's Special Day",
@@ -40,9 +30,6 @@ export const openingContent = {
   loadingText: "Preparing something special..."
 };
 
-// ============================================
-// WISHES SLIDER - MAIN FEATURE (10 SLIDES)
-// ============================================
 export const wishesSlides: WishSlide[] = [
   {
     id: 1,
@@ -126,9 +113,6 @@ export const wishesSlides: WishSlide[] = [
   }
 ];
 
-// ============================================
-// MEMORIES GALLERY (15 PHOTOS)
-// ============================================
 export const galleryImages: GalleryImage[] = [
   { id: 1, src: "/image/neza-1.jpg", alt: "Memory 1", span: 'tall' },
   { id: 2, src: "/image/neza-2.jpg", alt: "Memory 2", span: 'normal' },
@@ -146,30 +130,21 @@ export const galleryImages: GalleryImage[] = [
   { id: 15, src: "/image/neza-15.jpg", alt: "Memory 15", span: 'wide' },
 ];
 
-// ============================================
-// MAKE A WISH SECTION
-// ============================================
 export const wishSectionContent = {
   title: "Make a Wish",
   subtitle: "Pejamkan mata, tarik napas, bisikkan harapanmu...",
   blowButtonText: "Tiup Lilin ✨",
   afterWishTitle: "Happy Birthday, Neza! 🎂",
-  afterWishMessage: "Apapun yang baru saja kamu harapkan, aku ikut mengaminkannya dari sini. Semoga tahun ini menjadi babak terbaik dalam hidupmu. 💕",
+  afterWishMessage: "Apapun yang baru saja kamu bisikkan pada semesta, aku ikut mengaminkannya dari sini paling kencang. Semoga Tuhan memeluk mimpi-mimpimu, memudahkan langkahmu, dan menjaga senyummu. Ingat, kamu tidak pernah berjalan sendirian. Aku selalu ada di barisan pendukungmu. 💕",
   candleCount: 5
 };
 
-// ============================================
-// FOOTER / CLOSING
-// ============================================
 export const closingContent = {
   signature: "From someone who cares,",
   senderName: "Daniel",
   year: "2026"
 };
 
-// ============================================
-// MUSIC
-// ============================================
 export const musicConfig = {
   src: "/music/birthday-song.mp3",
   autoPlay: true,

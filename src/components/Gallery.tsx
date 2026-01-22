@@ -46,7 +46,7 @@ export default function Gallery() {
           Moments We Cherish
         </h2>
         <p className="text-[--color-text-secondary] mt-3 text-sm max-w-xs mx-auto">
-          Every picture tells a story of our love
+          Every picture holds a story worth remembering
         </p>
       </motion.div>
 
