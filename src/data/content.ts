@@ -23,10 +23,10 @@ export interface GalleryImage {
 // ============================================
 export const heroContent = {
   greeting: "Happy Birthday",
-  name: "Haifa Neza Tama", // Nama diperbarui
+  name: "Haifa Neza Tama", 
   tagline: "May your day be as beautiful as your smile",
   date: "January 22, 2026",
-  mainImage: "/image/neza-1.jpg", // Foto Utama (File Lokal)
+  mainImage: "/image/neza-8.jpg", // Foto Utama (Cover)
   mainImageAlt: "Birthday Girl"
 };
 
@@ -49,7 +49,7 @@ export const wishesSlides: WishSlide[] = [
     title: "To The One I Love",
     content: "Dari pertama kali kita bertemu, aku tahu hidupku akan berubah selamanya. Setiap momen bersamamu adalah hadiah yang tak ternilai. Terima kasih telah menjadi cahaya dalam hidupku.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-1.jpg", // Foto Lokal 1
+    mediaSrc: "/image/neza-2.jpg", // Foto
     mediaAlt: "Beautiful moment"
   },
   {
@@ -57,7 +57,7 @@ export const wishesSlides: WishSlide[] = [
     title: "Our Beautiful Journey",
     content: "Setiap langkah yang kita ambil bersama, setiap tawa yang kita bagikan, setiap air mata yang kita usap bersama - semuanya membentuk cerita cinta yang indah. Ini adalah chapter terbaikku.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-2.jpg", // Foto Lokal 2
+    mediaSrc: "/image/neza-3.jpg", // Foto
     mediaAlt: "Couple memories"
   },
   {
@@ -65,7 +65,7 @@ export const wishesSlides: WishSlide[] = [
     title: "My Favorite Video of You",
     content: "Melihat senyum dan tawamu di video ini selalu membuat hariku lebih cerah. Kamu adalah definisi kebahagiaan bagiku.",
     mediaType: 'video', 
-    mediaSrc: "/image/vid-neza.mp4", // VIDEO LOKAL (Pastikan file ada di public/video/)
+    mediaSrc: "/image/vid-neza.mp4", // VIDEO
     mediaAlt: "Special video memory"
   },
   {
@@ -73,7 +73,7 @@ export const wishesSlides: WishSlide[] = [
     title: "Dreams Together",
     content: "Di hari spesialmu ini, aku ingin berjanji untuk terus bermimpi bersamamu. Untuk membangun masa depan yang penuh cinta, tawa, dan kebahagiaan. Bersama, kita bisa melewati segalanya.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-3.jpg", // Foto Lokal 3
+    mediaSrc: "/image/neza-4.jpg", // Foto
     mediaAlt: "Dreaming together"
   },
   {
@@ -81,7 +81,7 @@ export const wishesSlides: WishSlide[] = [
     title: "Forever Grateful",
     content: "Terima kasih telah memilihku. Terima kasih telah mencintaiku dengan segala kekuranganku. Terima kasih telah menjadi partnerku dalam petualangan hidup ini.",
     mediaType: 'image',
-    mediaSrc: "/image/neza-4.jpg", // Foto Lokal 4
+    mediaSrc: "/image/neza-5.jpg", // Foto
     mediaAlt: "Sweet memories"
   },
   {
@@ -89,53 +89,28 @@ export const wishesSlides: WishSlide[] = [
     title: "Happy Birthday, My Love",
     content: "Selamat ulang tahun, sayangku. Semoga tahun ini membawa lebih banyak kebahagiaan, kesuksesan, dan cinta untukmu. Aku akan selalu di sini, mencintaimu hari ini, besok, dan selamanya. 💕",
     mediaType: 'image',
-    // Menggunakan foto hero lagi untuk penutup, atau bisa ganti link Unsplash
-    mediaSrc: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop", 
+    mediaSrc: "/image/neza-6.jpg", // Foto
     mediaAlt: "Celebration"
   }
 ];
 
 // ============================================
-// MEMORIES GALLERY
-// Saya campur Foto Lokal & Unsplash agar Grid terlihat penuh & bagus
+// MEMORIES GALLERY (15 PHOTOS)
 // ============================================
 export const galleryImages: GalleryImage[] = [
-  {
-    id: 1,
-    src: "/image/neza-1.jpg", // Foto Lokal
-    alt: "Memory 1",
-    span: 'tall'
-  },
-  {
-    id: 2,
-    src: "/image/neza-2.jpg", // Foto Lokal
-    alt: "Memory 2",
-    span: 'normal'
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop&q=80", // Unsplash Filler
-    alt: "Aesthetic Filler",
-    span: 'normal'
-  },
-  {
-    id: 4,
-    src: "/image/neza-3.jpg", // Foto Lokal
-    alt: "Memory 3",
-    span: 'wide'
-  },
-  {
-    id: 5,
-    src: "/image/neza-4.jpg", // Foto Lokal
-    alt: "Memory 4",
-    span: 'tall'
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop&q=80", // Unsplash Filler
-    alt: "Party Vibes",
-    span: 'normal'
-  },
+  { id: 1, src: "/image/neza-1.jpg", alt: "Memory 1", span: 'tall' },
+  { id: 2, src: "/image/neza-2.jpg", alt: "Memory 2", span: 'normal' },
+  { id: 3, src: "/image/neza-3.jpg", alt: "Memory 3", span: 'normal' },
+  { id: 4, src: "/image/neza-4.jpg", alt: "Memory 4", span: 'wide' },
+  { id: 5, src: "/image/neza-5.jpg", alt: "Memory 5", span: 'tall' },
+  { id: 6, src: "/image/neza-6.jpg", alt: "Memory 6", span: 'normal' },
+  { id: 7, src: "/image/neza-7.jpg", alt: "Memory 7", span: 'wide' },
+  { id: 8, src: "/image/neza-13.jpg", alt: "Memory 8", span: 'normal' },
+  { id: 9, src: "/image/neza-9.jpg", alt: "Memory 9", span: 'tall' },
+  { id: 10, src: "/image/neza-10.jpg", alt: "Memory 10", span: 'normal' },
+  { id: 11, src: "/image/neza-11.jpg", alt: "Memory 11", span: 'wide' },
+  { id: 14, src: "/image/neza-14.jpg", alt: "Memory 14", span: 'normal' },
+  { id: 15, src: "/image/neza-15.jpg", alt: "Memory 15", span: 'wide' },
 ];
 
 // ============================================
@@ -155,7 +130,7 @@ export const wishSectionContent = {
 // ============================================
 export const closingContent = {
   signature: "With all my love,",
-  senderName: "Daniel", // Nama Kamu
+  senderName: "Daniel", 
   year: "2026"
 };
 
