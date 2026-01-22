@@ -1,0 +1,477 @@
+@import "tailwindcss";
+
+/* ============================================
+   TAILWIND CSS v4 THEME CONFIGURATION
+   Birthday Romantic Theme - Soft Luxury
+   ============================================ */
+
+@theme {
+  /* Color Palette - Soft Luxury */
+  --color-soft-pink: #fff1f2;
+  --color-soft-pink-dark: #ffe4e6;
+  --color-cream: #fffbeb;
+  --color-cream-dark: #fef3c7;
+  --color-gold: #fde047;
+  --color-gold-dark: #facc15;
+  --color-rose: #fda4af;
+  --color-rose-dark: #fb7185;
+  --color-blush: #fecdd3;
+  --color-champagne: #fef9c3;
+  --color-warm-white: #fefce8;
+  --color-text-primary: #44403c;
+  --color-text-secondary: #78716c;
+  --color-text-muted: #a8a29e;
+  
+  /* Fonts */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-accent: "Playfair Display", Georgia, serif;
+  
+  /* Spacing for mobile app feel */
+  --spacing-app: 1.25rem;
+  
+  /* Border Radius */
+  --radius-soft: 1.5rem;
+  --radius-card: 1rem;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px -2px rgb(253 164 175 / 0.15);
+  --shadow-card: 0 8px 30px -4px rgb(253 164 175 / 0.2);
+  --shadow-glow: 0 0 40px rgb(253 224 71 / 0.3);
+}
+
+/* ============================================
+   FONT IMPORTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(180deg, var(--color-soft-pink) 0%, var(--color-cream) 50%, var(--color-warm-white) 100%);
+  background-attachment: fixed;
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* ============================================
+   APP CONTAINER - Mobile First with Desktop Centering
+   ============================================ */
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    box-shadow: 
+      -30px 0 60px -15px rgba(253, 164, 175, 0.1),
+      30px 0 60px -15px rgba(253, 164, 175, 0.1);
+  }
+  
+  body {
+    background: linear-gradient(135deg, #e7e5e4 0%, #d6d3d1 100%);
+  }
+  
+  .app-container {
+    background: linear-gradient(180deg, var(--color-soft-pink) 0%, var(--color-cream) 50%, var(--color-warm-white) 100%);
+  }
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rose);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-rose-dark);
+}
+
+/* ============================================
+   POLAROID FRAME EFFECT
+   ============================================ */
+.polaroid-frame {
+  background: white;
+  padding: 0.75rem 0.75rem 2.5rem 0.75rem;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.polaroid-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* ============================================
+   OVAL FRAME EFFECT
+   ============================================ */
+.oval-frame {
+  position: relative;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.oval-frame::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: white;
+  border-radius: inherit;
+}
+
+.oval-frame img {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+/* ============================================
+   GLOWING BUTTON
+   ============================================ */
+.glow-button {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-glow);
+}
+
+.glow-button::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--color-rose) 0%, var(--color-gold) 50%, var(--color-rose) 100%);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 60px rgb(253 224 71 / 0.5);
+}
+
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+.glow-button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   CANDLE ANIMATIONS
+   ============================================ */
+@keyframes flicker {
+  0%, 100% { 
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+  }
+  25% { 
+    transform: scaleY(1.1) scaleX(0.9);
+    opacity: 0.9;
+  }
+  50% { 
+    transform: scaleY(0.95) scaleX(1.05);
+    opacity: 1;
+  }
+  75% { 
+    transform: scaleY(1.05) scaleX(0.95);
+    opacity: 0.85;
+  }
+}
+
+.candle-flame {
+  animation: flicker 0.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(253, 224, 71, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(253, 224, 71, 1));
+  }
+}
+
+.flame-glow {
+  animation: glow-pulse 1s ease-in-out infinite;
+}
+
+/* ============================================
+   FLOATING ANIMATION
+   ============================================ */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ============================================
+   SPARKLE ANIMATION
+   ============================================ */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-rose-dark) 0%, var(--color-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   MASONRY GALLERY
+   ============================================ */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  grid-auto-flow: dense;
+}
+
+.masonry-item-tall {
+  grid-row: span 2;
+}
+
+.masonry-item-wide {
+  grid-column: span 2;
+}
+
+/* ============================================
+   SLIDER STYLES
+   ============================================ */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-soft);
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-card);
+}
+
+.romantic-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 241, 242, 0.9) 100%);
+  border: 1px solid var(--color-blush);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* ============================================
+   DECORATIVE ELEMENTS
+   ============================================ */
+.decorative-dots::before {
+  content: '• • •';
+  display: block;
+  text-align: center;
+  color: var(--color-rose);
+  letter-spacing: 0.5rem;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.decorative-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-rose) 50%, transparent 100%);
+}
+
+/* ============================================
+   AUDIO PLAYER CUSTOM
+   ============================================ */
+.audio-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--color-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.audio-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 768px) {
+  .audio-toggle {
+    right: calc(50% - 250px + 1.5rem);
+  }
+}
+
+/* ============================================
+   CONFETTI CANVAS
+   ============================================ */
+.confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ============================================
+   PAGE TRANSITION OVERLAY
+   ============================================ */
+.page-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-soft-pink) 0%, var(--color-cream) 100%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ============================================
+   HEART DECORATIONS
+   ============================================ */
+@keyframes heart-beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.heart-beat {
+  animation: heart-beat 1.5s ease-in-out infinite;
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+.section-divider {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-rose) 100%);
+}
+
+.section-divider::after {
+  background: linear-gradient(90deg, var(--color-rose) 0%, transparent 100%);
+}
+
+.section-divider span {
+  padding: 0 1rem;
+  color: var(--color-rose);
+  font-size: 1.25rem;
+}
